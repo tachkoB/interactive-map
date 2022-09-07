@@ -1,45 +1,30 @@
-import { Geographies, ZoomableGroup } from 'react-simple-maps';
+import { FC, PropsWithChildren } from 'react';
+import { ZoomableGroup } from 'react-simple-maps';
 
 // Styles
-import { ComposableMap, Geography } from './styled';
+import { ComposableMap } from './styled';
 
-// Topojson URL
-const URL =
-  'https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json';
-
-const geographyStyles = {
-  default: { fill: '#06F' },
-  hover: { fill: '#04D' },
-  pressed: { fill: '#02A' },
-};
-
-const WIDTH = 900;
-const HEIGHT = 500;
+interface Props extends PropsWithChildren {
+  height: number;
+  width: number;
+}
 
 /**
- * Renders a a zoomable map of the world
+ * Renders a a zoomable, interactive map
  */
-export default function MapChart() {
+const MapChart: FC<Props> = ({ height, width, children }) => {
   return (
-    <ComposableMap width={WIDTH} height={HEIGHT}>
+    <ComposableMap data-tip width={width} height={height}>
       <ZoomableGroup
         translateExtent={[
           [0, 0],
-          [WIDTH, HEIGHT],
+          [width, height],
         ]}
       >
-        <Geographies geography={URL}>
-          {({ geographies }) =>
-            geographies.map((geo) => (
-              <Geography
-                key={geo.rsmKey}
-                geography={geo}
-                style={geographyStyles}
-              />
-            ))
-          }
-        </Geographies>
+        {children}
       </ZoomableGroup>
     </ComposableMap>
   );
-}
+};
+
+export default MapChart;
