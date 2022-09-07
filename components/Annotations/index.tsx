@@ -11,8 +11,8 @@ const cities: Array<City> = [
   {
     name: 'Zurich',
     coordinates: [8.5417, 47.3769],
-    dx: 10,
-    dy: 20,
+    dx: -40,
+    dy: 40,
   },
   {
     name: 'Berlin',
@@ -23,7 +23,7 @@ const cities: Array<City> = [
   {
     name: 'Frankfurt',
     coordinates: [8.6821, 50.1109],
-    dx: -20,
+    dx: -25,
     dy: -20,
   },
   {
@@ -35,8 +35,8 @@ const cities: Array<City> = [
   {
     name: 'Manilla',
     coordinates: [120.9842, 14.5995],
-    dx: -20,
-    dy: 30,
+    dx: 100,
+    dy: 40,
   },
   {
     name: 'New York',
@@ -48,7 +48,7 @@ const cities: Array<City> = [
     name: 'Taguig',
     coordinates: [121.0509, 14.5176],
     dx: 60,
-    dy: -15,
+    dy: -25,
   },
   {
     name: 'Tokyo',
@@ -64,11 +64,15 @@ const cities: Array<City> = [
   },
 ];
 
+/**
+ * Renders a list of annotations for all the RepRisk offices
+ */
 const Annotations = () => {
   return (
     <>
       {cities.map(({ name, coordinates, dx, dy }) => (
         <Annotation
+          key={name}
           subject={coordinates}
           dx={dx}
           dy={dy}

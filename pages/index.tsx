@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import dynamic from 'next/dynamic';
 
 // Components
 import WorldMap from 'components/WorldMap';
@@ -12,40 +11,14 @@ import client from 'graphql/client';
 import { GET_COUNTRIES } from 'graphql/queries';
 
 // Types
-import { MappedCountry, Countries, TooltipState } from 'types';
+import { MappedCountries, Countries } from 'types';
 
 // Styles
 import { Container } from './styled';
 
 interface Props {
-  countries: MappedCountry;
+  countries: MappedCountries;
 }
-
-/**
- * Picks and returns keys from the active country for the tooltip text
- *
- * @param id          Id of the country
- * @param countries   List of all countries
- * @returns           Object with keys for the tooltip
- */
-const getActiveCountry = (id: string, countries: MappedCountry) => {
-  if (!countries[id]) {
-    return initialState;
-  }
-  const { name, capital, languages } = countries[id];
-
-  return {
-    name,
-    capital,
-    languages: languages.map(({ name }) => name),
-  };
-};
-
-const initialState: TooltipState = {
-  name: '',
-  capital: '',
-  languages: [],
-};
 
 /**
  * Renders the home page with the map
@@ -55,20 +28,10 @@ const initialState: TooltipState = {
  */
 const Home: NextPage<Props> = ({ countries }) => {
   const [country, setCountry] = useState('');
-  const [tooltip, setTooltip] = useState<TooltipState>(initialState);
 
   const handleSetCountry = (id: string) => {
     setCountry(id);
   };
-
-  useEffect(() => {
-    if (!country) {
-      setTooltip(initialState);
-      return;
-    }
-
-    setTooltip(getActiveCountry(country, countries));
-  }, [country]);
 
   return (
     <>
@@ -77,7 +40,7 @@ const Home: NextPage<Props> = ({ countries }) => {
       </Head>
       <Container>
         <h1>RepMap</h1>
-        <MapTooltip country={tooltip} />
+        <MapTooltip country={countries[country]} />
         <WorldMap handleSetCountry={handleSetCountry} />
       </Container>
     </>
@@ -91,10 +54,13 @@ export async function getServerSideProps() {
     query: GET_COUNTRIES,
   });
 
-  const countries = data.countries.reduce((a, b) => {
-    a[b.code] = b;
+  const countries = data.countries.reduce((a, country) => {
+    a[country.code] = {
+      ...country,
+      languages: country.languages.map((language) => language.name),
+    };
     return a;
-  }, {} as MappedCountry);
+  }, {} as MappedCountries);
 
   return {
     props: {

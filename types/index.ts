@@ -13,12 +13,8 @@ export interface Countries {
   countries: Array<Country>;
 }
 
-export interface MappedCountry {
-  [id: string]: Country;
-}
-
-export interface TooltipState {
-  name: string;
-  capital: string;
+export interface MappedCountry extends Omit<Country, 'languages'> {
   languages: Array<string>;
 }
+
+export type MappedCountries = Record<string, MappedCountry>;

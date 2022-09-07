@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Annotation, Geographies, Geography } from 'react-simple-maps';
+import { Geographies, Geography } from 'react-simple-maps';
 
 // Components
 import MapChart from 'components/Map';

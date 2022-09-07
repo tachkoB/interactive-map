@@ -1,0 +1,409 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Annotations component should render the component 1`] = `
+<div>
+  <svg
+    class="rsm-svg "
+    viewBox="0 0 800 600"
+  >
+    <g>
+      <rect
+        fill="transparent"
+        height="600"
+        width="800"
+      />
+      <g
+        class="rsm-zoomable-group undefined"
+        height="200"
+        transform="translate(0 0) scale(1)"
+        width="200"
+      >
+        <g
+          class="rsm-annotation "
+          transform="translate(379.1613148586466, 180.65323933284435)"
+        >
+          <path
+            d="M0,0 Q20,-20 40,-40"
+            fill="transparent"
+            stroke="orange"
+            stroke-linecap="round"
+            stroke-width="1"
+          />
+          <text
+            alignment-baseline="middle"
+            fill="orange"
+            text-anchor="end"
+            x="-8"
+          >
+            Zurich
+          </text>
+        </g>
+        <g
+          class="rsm-annotation "
+          transform="translate(458.8408236781645, 96.26647051721704)"
+        >
+          <path
+            d="M0,0 Q-15,15 -30,30"
+            fill="transparent"
+            stroke="orange"
+            stroke-linecap="round"
+            stroke-width="1"
+          />
+          <text
+            alignment-baseline="middle"
+            fill="orange"
+            text-anchor="end"
+            x="-8"
+          >
+            Berlin
+          </text>
+        </g>
+        <g
+          class="rsm-annotation "
+          transform="translate(394.0606523810681, 112.88868436104914)"
+        >
+          <path
+            d="M0,0 Q12.5,10 25,20"
+            fill="transparent"
+            stroke="orange"
+            stroke-linecap="round"
+            stroke-width="1"
+          />
+          <text
+            alignment-baseline="middle"
+            fill="orange"
+            text-anchor="end"
+            x="-8"
+          >
+            Frankfurt
+          </text>
+        </g>
+        <g
+          class="rsm-annotation "
+          transform="translate(369.7272164110342, 139.02079754879088)"
+        >
+          <path
+            d="M0,0 Q15,-5 30,-10"
+            fill="transparent"
+            stroke="orange"
+            stroke-linecap="round"
+            stroke-width="1"
+          />
+          <text
+            alignment-baseline="middle"
+            fill="orange"
+            text-anchor="end"
+            x="-8"
+          >
+            London
+          </text>
+        </g>
+        <g
+          class="rsm-annotation "
+          transform="translate(817.3062973457756, 287.9016848690285)"
+        >
+          <path
+            d="M0,0 Q-50,-20 -100,-40"
+            fill="transparent"
+            stroke="orange"
+            stroke-linecap="round"
+            stroke-width="1"
+          />
+          <text
+            alignment-baseline="middle"
+            fill="orange"
+            text-anchor="end"
+            x="-8"
+          >
+            Manilla
+          </text>
+        </g>
+        <g
+          class="rsm-annotation "
+          transform="translate(256.0553892434068, 200.56527690454024)"
+        >
+          <path
+            d="M0,0 Q-15,-20 -30,-40"
+            fill="transparent"
+            stroke="orange"
+            stroke-linecap="round"
+            stroke-width="1"
+          />
+          <text
+            alignment-baseline="middle"
+            fill="orange"
+            text-anchor="end"
+            x="-8"
+          >
+            New York
+          </text>
+        </g>
+        <g
+          class="rsm-annotation "
+          transform="translate(777.5368447688975, 223.19061883945625)"
+        >
+          <path
+            d="M0,0 Q-30,12.5 -60,25"
+            fill="transparent"
+            stroke="orange"
+            stroke-linecap="round"
+            stroke-width="1"
+          />
+          <text
+            alignment-baseline="middle"
+            fill="orange"
+            text-anchor="end"
+            x="-8"
+          >
+            Taguig
+          </text>
+        </g>
+        <g
+          class="rsm-annotation "
+          transform="translate(798.2011139683544, 136.41387443563735)"
+        >
+          <path
+            d="M0,0 Q-30,20 -60,40"
+            fill="transparent"
+            stroke="orange"
+            stroke-linecap="round"
+            stroke-width="1"
+          />
+          <text
+            alignment-baseline="middle"
+            fill="orange"
+            text-anchor="end"
+            x="-8"
+          >
+            Tokyo
+          </text>
+        </g>
+        <g
+          class="rsm-annotation "
+          transform="translate(172.0322126958872, 121.61828452063205)"
+        >
+          <path
+            d="M0,0 Q22.5,15 45,30"
+            fill="transparent"
+            stroke="orange"
+            stroke-linecap="round"
+            stroke-width="1"
+          />
+          <text
+            alignment-baseline="middle"
+            fill="orange"
+            text-anchor="end"
+            x="-8"
+          >
+            Toronto
+          </text>
+        </g>
+      </g>
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Annotations component should render the names of all cities 1`] = `
+<div>
+  <svg
+    class="rsm-svg "
+    viewBox="0 0 800 600"
+  >
+    <g>
+      <rect
+        fill="transparent"
+        height="600"
+        width="800"
+      />
+      <g
+        class="rsm-zoomable-group undefined"
+        height="200"
+        transform="translate(0 0) scale(1)"
+        width="200"
+      >
+        <g
+          class="rsm-annotation "
+          transform="translate(379.1613148586466, 180.65323933284435)"
+        >
+          <path
+            d="M0,0 Q20,-20 40,-40"
+            fill="transparent"
+            stroke="orange"
+            stroke-linecap="round"
+            stroke-width="1"
+          />
+          <text
+            alignment-baseline="middle"
+            fill="orange"
+            text-anchor="end"
+            x="-8"
+          >
+            Zurich
+          </text>
+        </g>
+        <g
+          class="rsm-annotation "
+          transform="translate(458.8408236781645, 96.26647051721704)"
+        >
+          <path
+            d="M0,0 Q-15,15 -30,30"
+            fill="transparent"
+            stroke="orange"
+            stroke-linecap="round"
+            stroke-width="1"
+          />
+          <text
+            alignment-baseline="middle"
+            fill="orange"
+            text-anchor="end"
+            x="-8"
+          >
+            Berlin
+          </text>
+        </g>
+        <g
+          class="rsm-annotation "
+          transform="translate(394.0606523810681, 112.88868436104914)"
+        >
+          <path
+            d="M0,0 Q12.5,10 25,20"
+            fill="transparent"
+            stroke="orange"
+            stroke-linecap="round"
+            stroke-width="1"
+          />
+          <text
+            alignment-baseline="middle"
+            fill="orange"
+            text-anchor="end"
+            x="-8"
+          >
+            Frankfurt
+          </text>
+        </g>
+        <g
+          class="rsm-annotation "
+          transform="translate(369.7272164110342, 139.02079754879088)"
+        >
+          <path
+            d="M0,0 Q15,-5 30,-10"
+            fill="transparent"
+            stroke="orange"
+            stroke-linecap="round"
+            stroke-width="1"
+          />
+          <text
+            alignment-baseline="middle"
+            fill="orange"
+            text-anchor="end"
+            x="-8"
+          >
+            London
+          </text>
+        </g>
+        <g
+          class="rsm-annotation "
+          transform="translate(817.3062973457756, 287.9016848690285)"
+        >
+          <path
+            d="M0,0 Q-50,-20 -100,-40"
+            fill="transparent"
+            stroke="orange"
+            stroke-linecap="round"
+            stroke-width="1"
+          />
+          <text
+            alignment-baseline="middle"
+            fill="orange"
+            text-anchor="end"
+            x="-8"
+          >
+            Manilla
+          </text>
+        </g>
+        <g
+          class="rsm-annotation "
+          transform="translate(256.0553892434068, 200.56527690454024)"
+        >
+          <path
+            d="M0,0 Q-15,-20 -30,-40"
+            fill="transparent"
+            stroke="orange"
+            stroke-linecap="round"
+            stroke-width="1"
+          />
+          <text
+            alignment-baseline="middle"
+            fill="orange"
+            text-anchor="end"
+            x="-8"
+          >
+            New York
+          </text>
+        </g>
+        <g
+          class="rsm-annotation "
+          transform="translate(777.5368447688975, 223.19061883945625)"
+        >
+          <path
+            d="M0,0 Q-30,12.5 -60,25"
+            fill="transparent"
+            stroke="orange"
+            stroke-linecap="round"
+            stroke-width="1"
+          />
+          <text
+            alignment-baseline="middle"
+            fill="orange"
+            text-anchor="end"
+            x="-8"
+          >
+            Taguig
+          </text>
+        </g>
+        <g
+          class="rsm-annotation "
+          transform="translate(798.2011139683544, 136.41387443563735)"
+        >
+          <path
+            d="M0,0 Q-30,20 -60,40"
+            fill="transparent"
+            stroke="orange"
+            stroke-linecap="round"
+            stroke-width="1"
+          />
+          <text
+            alignment-baseline="middle"
+            fill="orange"
+            text-anchor="end"
+            x="-8"
+          >
+            Tokyo
+          </text>
+        </g>
+        <g
+          class="rsm-annotation "
+          transform="translate(172.0322126958872, 121.61828452063205)"
+        >
+          <path
+            d="M0,0 Q22.5,15 45,30"
+            fill="transparent"
+            stroke="orange"
+            stroke-linecap="round"
+            stroke-width="1"
+          />
+          <text
+            alignment-baseline="middle"
+            fill="orange"
+            text-anchor="end"
+            x="-8"
+          >
+            Toronto
+          </text>
+        </g>
+      </g>
+    </g>
+  </svg>
+</div>
+`;
