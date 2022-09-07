@@ -1,8 +1,9 @@
 import { FC } from 'react';
-import { Geographies, Geography } from 'react-simple-maps';
+import { Annotation, Geographies, Geography } from 'react-simple-maps';
 
 // Components
 import MapChart from 'components/Map';
+import Annotations from 'components/Annotations';
 
 // Constants
 const WIDTH = 900;
@@ -21,6 +22,8 @@ const geographyStyles = {
 interface Props {
   handleSetCountry: (id: string) => void;
 }
+
+// Berlin, Frankfurt, Londond, Manila, New York, Taguig, Tokyo, Toronto, Zurich
 
 /**
  * Renders an interactive map of the world
@@ -46,6 +49,7 @@ const WorldMap: FC<Props> = ({ handleSetCountry }) => {
           })
         }
       </Geographies>
+      <Annotations />
     </MapChart>
   );
 };

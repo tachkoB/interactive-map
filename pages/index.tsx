@@ -47,14 +47,19 @@ const initialState: TooltipState = {
   languages: [],
 };
 
+/**
+ * Renders the home page with the map
+ *
+ * @param countries List of all countries
+ *
+ */
 const Home: NextPage<Props> = ({ countries }) => {
   const [country, setCountry] = useState('');
+  const [tooltip, setTooltip] = useState<TooltipState>(initialState);
 
   const handleSetCountry = (id: string) => {
     setCountry(id);
   };
-
-  const [tooltip, setTooltip] = useState<TooltipState>(initialState);
 
   useEffect(() => {
     if (!country) {
@@ -64,8 +69,6 @@ const Home: NextPage<Props> = ({ countries }) => {
 
     setTooltip(getActiveCountry(country, countries));
   }, [country]);
-
-  console.log(tooltip, 'tooltip');
 
   return (
     <>
