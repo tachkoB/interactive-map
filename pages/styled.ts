@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  height: 50%;
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  > h1 {
+    margin: 32px 0;
+    font-size: 2.5rem;
+  }
 `;
