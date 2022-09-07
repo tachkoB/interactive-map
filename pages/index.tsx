@@ -40,8 +40,8 @@ const Home: NextPage<Props> = ({ countries }) => {
       </Head>
       <Container>
         <h1>RepMap</h1>
-        <MapTooltip country={countries[country]} />
         <WorldMap handleSetCountry={handleSetCountry} />
+        <MapTooltip country={countries[country]} />
       </Container>
     </>
   );
